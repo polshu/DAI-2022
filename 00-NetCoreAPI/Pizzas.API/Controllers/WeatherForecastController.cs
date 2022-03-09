@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Pizza.API.Controllers
+namespace Pizzas.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

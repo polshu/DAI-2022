@@ -1,0 +1,4 @@
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\
+dotnet new webapi --no-https -n Pizzas.API
+dotnet new gitignore
+

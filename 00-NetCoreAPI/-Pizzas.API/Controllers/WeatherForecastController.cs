@@ -24,6 +24,7 @@ namespace Pizzas.API.Controllers
         }
 
         [HttpGet]
+        [Route("/Api/Cadorna")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

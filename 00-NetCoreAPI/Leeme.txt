@@ -1,4 +1,9 @@
 D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\
 dotnet new webapi --no-https -n Pizzas.API
+cd Pizzas.API
 dotnet new gitignore
+code -a .
+dotnet add package System.Data.SqlClient
+dotnet add package Dapper
+dotnet remove package Swashbuckle.AspNetCore
 

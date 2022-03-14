@@ -7,71 +7,103 @@ using Pizzas.API.Models;
 
 namespace Pizzas.API.Utils {
     public static class BD {
-        private static string _connectionString = @"Persist Security Info=False;User ID=Pizzas;password=Pizzas;Initial Catalog=DAI-Pizzas;Data Source=.;";
+        private static string CONNECTION_STRING = @"Persist Security Info=False;User ID=Pizzas;password=Pizzas;Initial Catalog=DAI-Pizzas;Data Source=.;";
 
         public static List<Pizza> GetAll() {
-            using (SqlConnection db = new SqlConnection(_connectionString)) {
-                string sql = "SELECT Id, Nombre, LibreGluten, Descripcion FROM Pizzas";
-                return db.Query<Pizza>(sql).ToList();
+            string          sqlQuery;
+            List<Pizza>     returnList;
+
+            returnList = new List<Pizza>();
+            using (SqlConnection db = new SqlConnection(CONNECTION_STRING)) {
+                sqlQuery    = "SELECT Id, Nombre, LibreGluten, Importe, Descripcion FROM Pizzas";
+                returnList  = db.Query<Pizza>(sqlQuery).ToList();
             }
+
+            return returnList;
         }
 
-        public static Pizza Get(int id) {
-            string  sql;
+        public static Pizza GetById(int id) {
+            string  sqlQuery;
             Pizza   returnEntity = null;
             
-            sql = "SELECT Id, Nombre, LibreGluten, Descripcion FROM Pizzas WHERE Id = @idPizza";
-            using (SqlConnection db = new SqlConnection(_connectionString)) {
-                returnEntity  = db.QueryFirstOrDefault<Pizza>(sql, new { idPizza = id });
+            sqlQuery = "SELECT Id, Nombre, LibreGluten, Importe, Descripcion FROM Pizzas WHERE Id = @idPizza";
+            using (SqlConnection db = new SqlConnection(CONNECTION_STRING)) {
+                returnEntity  = db.QueryFirstOrDefault<Pizza>(sqlQuery, new { idPizza = id });
             }
             return returnEntity;
         }
 
-        public static int Add(Pizza pizza) {
-            string  sql;
-            int     result = 0;
-                
-            sql = "INSERT INTO Pizzas (Nombre, LibreGluten, Descripcion) VALUES (@nombre,@libreGluten, @descripcion)";
-            using (SqlConnection db = new SqlConnection(_connectionString)) {
-                result = db.Execute(sql, new { nombre = pizza.Nombre, libreGluten = pizza.LibreGluten, descripcion = pizza.Descripcion });
-            }
-            return result;
-        }
-
-
-        public static int Update(Pizza pizza) {
-            string  sql;
-            int     result = 0;
-
-            sql = "UPDATE Pizzas SET Nombre = @nombre, LibreGluten = @libreGluten, Descripcion = @descripcion WHERE Id = @idPizza";
-            using (var db = new SqlConnection(_connectionString)) {
-                result = db.Execute(sql, new { idPizza = pizza.Id, nombre = pizza.Nombre, libreGluten = pizza.LibreGluten, descripcion = pizza.Descripcion });
-            }
-            return result;
-        }
-
-        #region Delete(int id)
-        public static void Delete(int id) {
-            string sql;
-
-            sql = "DELETE FROM Pizzas WHERE Id > @idPizza";
-            using (SqlConnection db = new SqlConnection(_connectionString)) {
-                db.Execute(sql, new { idPizza = id });
-            }
-        }
-
-        public static int Delete_v1(int id) {
-            // Retorna los RecordsAffected
-            string  sql;
+        public static int Insert(Pizza pizza) {
+            string  sqlQuery;
             int     intRowsAffected = 0;
-            
-            sql = "DELETE FROM Pizzas WHERE Id > @idPizza";
-            using (SqlConnection db = new SqlConnection(_connectionString)) {
-                intRowsAffected = db.Execute(sql, new { idPizza = id });
+                
+            sqlQuery = "INSERT INTO Pizzas (Nombre, LibreGluten, Importe, Descripcion) VALUES (@nombre,@libreGluten, @importe, @descripcion)";
+            using (SqlConnection db = new SqlConnection(CONNECTION_STRING)) {
+                intRowsAffected = db.Execute(sqlQuery, new {  
+                                                            nombre      = pizza.Nombre, 
+                                                            libreGluten = pizza.LibreGluten, 
+                                                            importe     = pizza.Importe,
+                                                            descripcion = pizza.Descripcion 
+                                                           }
+                                            );
             }
             return intRowsAffected;
         }
-        #endregion
+
+        public static int Insert_ReturnNewId(Pizza pizza) {
+            string  sqlQuery;
+            int     intNewId = 0;
+                
+            sqlQuery = "INSERT INTO Pizzas (Nombre, LibreGluten, Importe, Descripcion) VALUES (@nombre,@libreGluten, @importe, @descripcion);SELECT CAST(SCOPE_IDENTITY() AS INT)";
+            using (SqlConnection db = new SqlConnection(CONNECTION_STRING)) {
+                intNewId = db.QuerySingle<int>(sqlQuery, new {  
+                                                    nombre      = pizza.Nombre, 
+                                                    libreGluten = pizza.LibreGluten, 
+                                                    importe     = pizza.Importe,
+                                                    descripcion = pizza.Descripcion 
+                                                             }
+                                               );
+                pizza.Id = intNewId;
+            }
+            return intNewId;
+        }
+
+
+        public static int UpdateById(Pizza pizza) {
+            // 
+            // Actualiza un registro y retorna los RowsAffected.
+            //
+            string  sqlQuery;
+            int     intRowsAffected = 0;
+
+            sqlQuery = "UPDATE Pizzas SET Nombre = @nombre, LibreGluten = @libreGluten, Importe = @importe, Descripcion = @descripcion WHERE Id = @idPizza";
+            using (var db = new SqlConnection(CONNECTION_STRING)) {
+                intRowsAffected = db.Execute(sqlQuery, new {     
+                                                            idPizza     = pizza.Id, 
+                                                            nombre      = pizza.Nombre, 
+                                                            libreGluten = pizza.LibreGluten, 
+                                                            importe     = pizza.Importe, 
+                                                            descripcion = pizza.Descripcion 
+                                                           }
+                                            );
+            }
+            return intRowsAffected;
+        }
+
+        
+        public static int DeleteById(int id) {
+            //
+            // Elimina un registro y retorna los RowsAffected.
+            //
+            string  sqlQuery;
+            int     intRowsAffected = 0;
+            
+            sqlQuery = "DELETE FROM Pizzas WHERE Id = @idPizza";
+            using (SqlConnection db = new SqlConnection(CONNECTION_STRING)) {
+                intRowsAffected = db.Execute(sqlQuery, new { idPizza = id });
+            }
+            return intRowsAffected;
+        }
 
 
     }

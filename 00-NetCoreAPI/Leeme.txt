@@ -1,9 +1,63 @@
 D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\
-dotnet new webapi --no-https -n Pizzas.API
-cd Pizzas.API
-dotnet new gitignore
-code -a .
-dotnet add package System.Data.SqlClient
-dotnet add package Dapper
-dotnet remove package Swashbuckle.AspNetCore
+.- dotnet new webapi --no-https -n Pizzas.API
+.- cd Pizzas.API
+.- dotnet new gitignore
+.- code -a .
+Navegar y probar: http://localhost:5000/WeatherForecast
+
+Agrego y elimino los packages:
+.- dotnet add package System.Data.SqlClient
+.- dotnet add package Dapper
+.- dotnet remove package Swashbuckle.AspNetCore
+
+Comento en Startup.cs
+.- using Microsoft.OpenApi.Models;
+.- Comento todo lo referente a Swagger.
+
+Elimino	
+. /Controllers/WeatherForecastController.cs
+. /WeatherForecast.cs
+
+Creo las Carpetas 
+./Models
+./Utils
+
+Copio:
+. /Controllers/PizzasController.cs
+. /Models/Pizza.cs
+. /Utils/BD.cs
+
+------------------------------------------
+Version: 1.65.2 (user setup)
+Commit: c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
+Date: 2022-03-10T14:33:55.248Z
+Electron: 13.5.2
+Chromium: 91.0.4472.164
+Node.js: 14.16.0
+V8: 9.1.269.39-electron.0
+OS: Windows_NT x64 10.0.19042
+------------------------------------------
+Extensiones Instaladas:
+
+Name: C#
+Id: ms-dotnettools.csharp
+Description: C# for Visual Studio Code (powered by OmniSharp).
+Version: 1.24.1
+Publisher: Microsoft
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
+
+Name: NuGet Package Manager GUI
+Id: aliasadidev.nugetpackagemanagergui
+Description: An extension for Visual Studio Code that lets you easily update/remove/install packages from NuGet server for .NET Core 1.1+/.Net5+ projects
+Version: 2.0.1
+Publisher: aliasadidev
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=aliasadidev.nugetpackagemanagergui
+
+Name: Prettier - Code formatter
+Id: esbenp.prettier-vscode
+Description: Code formatter using prettier
+Version: 9.3.0
+Publisher: Prettier
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
 

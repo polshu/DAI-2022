@@ -1,0 +1,4 @@
+Version 1
+.- Se codificaron todos los HTTP Status Codes de retorno para que sea una interfaz RESTful.
+.- Se Cambio el "Insert" por el "Insert_ReturnNewId" para obtener el Id del Registro insertado.
+.- 

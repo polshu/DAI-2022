@@ -1,0 +1,5 @@
+Version 2 - Mejoras con respecto a la Version 1
+.- Refactorizacion interna.
+.- Se movieron los metodos CRUD de Pizzas a una nueva Clase /Services/PizzasServices.cs
+.- Se dejo en /Utils/BD.cs solo como una clase Helper de Base de datos que no sabe nada de las Tablas.
+.- Se Modifico el PizzasController para que invoque a los metodos de /Services/PizzasServices.cs

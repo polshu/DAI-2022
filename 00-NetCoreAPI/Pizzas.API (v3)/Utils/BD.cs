@@ -1,13 +1,16 @@
 using System.Data.SqlClient;
+using Pizzas.API.Helpers;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
 
 namespace Pizzas.API.Utils {
     public class BD {
-        private static string CONNECTION_STRING = @"Persist Security Info=False;User ID=Pizzas;password=Pizzas;Initial Catalog=DAI-Pizzas;Data Source=.;";
-
         public static SqlConnection GetConnection(){
-            SqlConnection db;
-            string connectionString = CONNECTION_STRING;
+            SqlConnection   db;
+            string          connectionString;
+            
+            connectionString = ConfigurationHelper.GetConfiguration().GetValue<string>("DatabaseSettings:ConnectionString");
             db = new SqlConnection(connectionString);
             return db;
         }

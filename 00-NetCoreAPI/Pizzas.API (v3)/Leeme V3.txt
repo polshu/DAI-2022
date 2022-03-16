@@ -1,0 +1,4 @@
+Version 3 - Mejoras con respecto a la Version 2
+.- Refactorizacion interna.
+.- Se creo una clase /Helpers/ConfigurationHelper.cs para la obtencion del los valores de appsettings.json
+.- Se modifico en /Utils/BD.cs para que obtenga el ConnectionString del archivo de configuracion.

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 //
 using Pizzas.API.Models;
 using Pizzas.API.Services;
@@ -34,7 +35,6 @@ namespace Pizzas.API.Controllers {
     [ApiController]
     [Route("api/[controller]")]
     public class PizzasController : ControllerBase {
-        //...
 
         [HttpGet]
         public IActionResult GetAll() {

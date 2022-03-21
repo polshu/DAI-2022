@@ -1,4 +1,4 @@
 Version 1
+.- Todo el Acceso a la base de datos se encuentra en la clase DB.
 .- Se codificaron todos los HTTP Status Codes de retorno para que sea una interfaz RESTful.
 .- Se Cambio el "Insert" por el "Insert_ReturnNewId" para obtener el Id del Registro insertado.
-.- 

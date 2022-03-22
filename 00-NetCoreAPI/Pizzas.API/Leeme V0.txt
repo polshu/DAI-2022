@@ -1,0 +1,3 @@
+Version inicial
+Simplemente se hizo con el comando
+	dotnet new webapi --no-https -n Pizzas.API

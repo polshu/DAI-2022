@@ -1,21 +1,21 @@
 Version 1
-.- Todo el Acceso a la base de datos se encuentra en la clase DB.
+.- Todo el Acceso a la base de datos se encuentra en la clase BD.cs.
 .- Se codificaron todos los HTTP Status Codes de retorno para que sea una interfaz RESTful.
 .- Se Cambio el "Insert" por el "Insert_ReturnNewId" para obtener el Id del Registro insertado.
 
 Requerimientos:
 VSCODE:
-.- Ultima version de VSCode Version: 1.65.2
+    Ultima version de VSCode Version: 1.65.2
 
 EXTENSIONES (Comandos):
-code --list-extensions
-code --install-extension {EXTENSIONID}
-code --uninstall-extension {EXTENSIONID}
+Ejemplo: code --list-extensions
+Ejemplo: code --install-extension {EXTENSIONID}
+Ejemplo: code --uninstall-extension {EXTENSIONID}
 
 EXTENSIONES (Instalar):
-code --install-extension ms-dotnettools.csharp
-code --install-extension esbenp.prettier-vscode
+    code --install-extension ms-dotnettools.csharp
+    code --install-extension esbenp.prettier-vscode
 
 PACKAGES (Instalar):
-dotnet add package Dapper
-dotnet add package System.Data.SqlClient
+    dotnet add package Dapper
+    dotnet add package System.Data.SqlClient

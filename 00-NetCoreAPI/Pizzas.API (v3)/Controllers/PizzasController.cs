@@ -4,37 +4,39 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
 //
 using Pizzas.API.Models;
 using Pizzas.API.Services;
 using Pizzas.API.Utils;
+
 /*
-GET /api/pizzas
-GET /api/pizzas/{id}
-POST /api/pizzas
-{
-    "nombre"        : "Pizza de Cancha",
-    "libreGluten"   : false,
-    "importe"       : 1550.50,
-    "descripcion"   : "pizza con queso y rodajas de tomate y ajo."
-}
+    GET /api/pizzas
+    GET /api/pizzas/{id}
+    POST /api/pizzas
+    {
+        "nombre"        : "Pizza de Cancha",
+        "libreGluten"   : false,
+        "importe"       : 1550.50,
+        "descripcion"   : "pizza con queso y rodajas de tomate y ajo."
+    }
 
-PUT /api/pizzas/{id}
-{
-    "id"            : 13,
-    "nombre"        : "Napolitana",
-    "libreGluten"   : false,
-    "descripcion"   : "pizza con queso y rodajas de tomate y muchisimo ajo."
-}
+    PUT /api/pizzas/{id}
+    {
+        "id"            : 13,
+        "nombre"        : "Napolitana",
+        "libreGluten"   : false,
+        "importe"       : 2550.50,
+        "descripcion"   : "pizza con queso y rodajas de tomate y muchisimo ajo."
+    }
 
-DELETE /api/pizzas/{id}
-
+    DELETE /api/pizzas/{id}
 */
+
 namespace Pizzas.API.Controllers {
     [ApiController]
     [Route("api/[controller]")]
     public class PizzasController : ControllerBase {
+        //...
 
         [HttpGet]
         public IActionResult GetAll() {
@@ -79,7 +81,6 @@ namespace Pizzas.API.Controllers {
             // HTTP response code 409 (Conflict) if resource already exists.
             int             intRowsAffected;
             intRowsAffected = PizzasServices.Insert(pizza);
-            //intRowsAffected = BD.Insert_ReturnNewId(pizza);
 
             return CreatedAtAction(nameof(Create), new { id = pizza.Id }, pizza);
         }

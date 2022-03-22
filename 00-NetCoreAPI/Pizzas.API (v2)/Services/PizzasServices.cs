@@ -9,6 +9,9 @@ using Pizzas.API.Utils;
 namespace Pizzas.API.Services {
     public class PizzasServices {
         public static List<Pizza> GetAll() {
+            //
+            // Obtiene todos los registro de la base de datos
+            //
             string          sqlQuery;
             List<Pizza>     returnList;
 
@@ -23,6 +26,9 @@ namespace Pizzas.API.Services {
         }
 
         public static Pizza GetById(int id) {
+            //
+            // Obtiene un registro de la base de datos segun el Id
+            //
             string  sqlQuery;
             Pizza   returnEntity = null;
             
@@ -69,10 +75,10 @@ namespace Pizzas.API.Services {
             int     intRowsAffected = 0;
 
             sqlQuery  = "UPDATE Pizzas SET ";
-            sqlQuery += "    Nombre = @nombre, ";
-            sqlQuery += "    LibreGluten = @libreGluten, ";
-            sqlQuery += "    Importe = @importe, ";
-            sqlQuery += "    Descripcion = @descripcion ";
+            sqlQuery += "    Nombre         = @nombre, ";
+            sqlQuery += "    LibreGluten    = @libreGluten, ";
+            sqlQuery += "    Importe        = @importe, ";
+            sqlQuery += "    Descripcion    = @descripcion ";
             sqlQuery += "WHERE Id = @idPizza";
             using (var db = BD.GetConnection()) {
                 intRowsAffected = db.Execute(sqlQuery, new {     

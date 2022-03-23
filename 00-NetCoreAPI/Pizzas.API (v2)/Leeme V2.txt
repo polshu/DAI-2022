@@ -1,6 +1,0 @@
-Version 2 - Mejoras con respecto a la Version 1
-.- Refactorizacion interna.
-.- Se movieron los metodos CRUD de Pizzas a una nueva Clase /Services/PizzasServices.cs
-.- Se modifico el PizzasServices.Insert para que retorne el Id del registro creado en la funcion y en el objeto Pizza.
-.- Se dejo en /Utils/BD.cs solo como una clase Helper de Base de datos que no sabe nada de las Tablas.
-.- Se Modifico el PizzasController para que invoque a los metodos de /Services/PizzasServices.cs (en vez de la clase BD)

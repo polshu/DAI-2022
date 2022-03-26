@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "0636f347-3a3d-4f0c-8974-b4e99787b752",
+		"name": "DAI 202X - TP1 - PIZZA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pizzas - GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/pizzas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pizzas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pizzas - GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/pizzas/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pizzas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pizzas - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Pizzaiola\",\r\n    \"libreGluten\": false,\r\n    \"importe\": 2050.50,\r\n    \"descripcion\": \"pizza con queso y rodajas de tomate y ajo.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/pizzas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pizzas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pizzas - Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"Napolitana\",\r\n    \"libreGluten\": false,\r\n    \"importe\": 1850.50,\r\n    \"descripcion\": \"Salsa de tomate, queso mozzarella, anchoas, orégano, alcaparras y aceite de oliva. Un corcho para cuando vas al excusado..\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/pizzas/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pizzas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pizzas - DeleteById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/pizzas/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"pizzas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

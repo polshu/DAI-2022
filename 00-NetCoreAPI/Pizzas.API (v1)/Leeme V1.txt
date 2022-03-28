@@ -8,9 +8,9 @@ VSCODE:
     Ultima version de VSCode Version: 1.65.2
 
 EXTENSIONES (Comandos):
-Ejemplo: code --list-extensions
-Ejemplo: code --install-extension {EXTENSIONID}
-Ejemplo: code --uninstall-extension {EXTENSIONID}
+    Ejemplo: code --list-extensions
+    Ejemplo: code --install-extension {EXTENSIONID}
+    Ejemplo: code --uninstall-extension {EXTENSIONID}
 
 EXTENSIONES (Instalar):
     code --install-extension ms-dotnettools.csharp

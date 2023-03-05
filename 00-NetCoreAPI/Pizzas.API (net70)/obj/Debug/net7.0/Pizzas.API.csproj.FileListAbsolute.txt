@@ -1,0 +1,66 @@
+C:\Temp\Pizzas.API\bin\Debug\net7.0\appsettings.Development.json
+C:\Temp\Pizzas.API\bin\Debug\net7.0\appsettings.json
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Pizzas.API.exe
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Pizzas.API.deps.json
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Pizzas.API.runtimeconfig.json
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Pizzas.API.dll
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Pizzas.API.pdb
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Temp\Pizzas.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.csproj.AssemblyReference.cache
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.AssemblyInfoInputs.cache
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.AssemblyInfo.cs
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.csproj.CoreCompileInputs.cache
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets\msbuild.Pizzas.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets\msbuild.build.Pizzas.API.props
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Pizzas.API.props
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Pizzas.API.props
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Temp\Pizzas.API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Temp\Pizzas.API\obj\Debug\net7.0\scopedcss\bundle\Pizzas.API.styles.css
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.csproj.CopyComplete
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.dll
+C:\Temp\Pizzas.API\obj\Debug\net7.0\refint\Pizzas.API.dll
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.pdb
+C:\Temp\Pizzas.API\obj\Debug\net7.0\Pizzas.API.genruntimeconfig.cache
+C:\Temp\Pizzas.API\obj\Debug\net7.0\ref\Pizzas.API.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\appsettings.Development.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\appsettings.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Pizzas.API.exe
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Pizzas.API.deps.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Pizzas.API.runtimeconfig.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Pizzas.API.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Pizzas.API.pdb
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.csproj.AssemblyReference.cache
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.AssemblyInfoInputs.cache
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.AssemblyInfo.cs
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.csproj.CoreCompileInputs.cache
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.MvcApplicationPartsAssemblyInfo.cs
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.MvcApplicationPartsAssemblyInfo.cache
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets\msbuild.Pizzas.API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets\msbuild.build.Pizzas.API.props
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Pizzas.API.props
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Pizzas.API.props
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets.pack.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets.build.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\staticwebassets.development.json
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\scopedcss\bundle\Pizzas.API.styles.css
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.csproj.CopyComplete
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\refint\Pizzas.API.dll
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.pdb
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\Pizzas.API.genruntimeconfig.cache
+D:\GITProyectos\polshu\DAI-2022\00-NetCoreAPI\Pizzas.API (net70)\obj\Debug\net7.0\ref\Pizzas.API.dll

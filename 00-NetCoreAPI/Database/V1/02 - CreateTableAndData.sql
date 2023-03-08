@@ -10,8 +10,12 @@ CREATE TABLE [dbo].[Pizzas](
 	[Nombre] [varchar](150) NULL,
 	[LibreGluten] [bit] NULL,
 	[Importe] [float] NULL,
-	[Descripcion] [varchar](max) NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+	[Descripcion] [varchar](max) NULL,
+ CONSTRAINT [PK_Pizzas] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] 
 GO
 SET IDENTITY_INSERT [dbo].[Pizzas] ON 
 GO

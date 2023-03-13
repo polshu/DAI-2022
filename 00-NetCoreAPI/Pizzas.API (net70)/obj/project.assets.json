@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GITProyectos\\polshu\\DAI-2022\\00-NetCoreAPI\\Pizzas.API (net70)\\Pizzas.API.csproj",
+      "projectUniqueName": "D:\\GITProyectos\\polshu\\DAI-2022-PRIVATE\\00-NetCoreAPI\\Pizzas.API (net70)\\Pizzas.API.csproj",
       "projectName": "Pizzas.API",
-      "projectPath": "D:\\GITProyectos\\polshu\\DAI-2022\\00-NetCoreAPI\\Pizzas.API (net70)\\Pizzas.API.csproj",
+      "projectPath": "D:\\GITProyectos\\polshu\\DAI-2022-PRIVATE\\00-NetCoreAPI\\Pizzas.API (net70)\\Pizzas.API.csproj",
       "packagesPath": "C:\\Users\\polshu\\.nuget\\packages\\",
-      "outputPath": "D:\\GITProyectos\\polshu\\DAI-2022\\00-NetCoreAPI\\Pizzas.API (net70)\\obj\\",
+      "outputPath": "D:\\GITProyectos\\polshu\\DAI-2022-PRIVATE\\00-NetCoreAPI\\Pizzas.API (net70)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\polshu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -526,7 +526,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

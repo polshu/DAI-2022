@@ -1,9 +1,11 @@
 using System.Net;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using System.Linq;
 using System.Net.Http;
-using Pizzas.API.Models;
+using Pizzas.API.Models.OMDB;
+using Pizzas.API.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,43 +18,86 @@ namespace Pizzas.API.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class OMBDController : ControllerBase {
+    static HttpClient client = new HttpClient();
+
     public OMBDController() { }
 
 
+    // Primer version:
+    // Hice toda la logica en el controller.
+    // http://localhost:5000/OMBD/search?term=toy
+    // http://localhost:5000/OMBD/search?term=rischio
+    //
     [HttpGet]
     [Route("search")]
-    public async Task<string> GetSearch([FromQuery] string search) {
-        //http://localhost:5000/test/saludar?nombre=cacho
-        string apiKey = "YOUR_API_KEY";
-        string baseUri = $"http://www.omdbapi.com/?apikey={apiKey}";
+    public async Task<IActionResult> GetSearchInController([FromQuery] string term = "") {
+        IActionResult        returnValue;
+        SearchByTermResponse returnObject  = new SearchByTermResponse();
+        string endPoint = "http://www.omdbapi.com/?s=" + term + "&apikey=7b62fa5d";
+        string contentString;
 
-        HttpClient ApiClient;
-        //Create a new HttpClient object
-        ApiClient = new HttpClient();
-        //Clear headers out of HttpClient
-        ApiClient.DefaultRequestHeaders.Accept.Clear();
-        //Adds a header which requests a JSON data rather than web page tags etc.
-        ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-         string url = "http://www.omdbapi.com/?s=" + search + "&apikey=568027e4";
-            //call HTTPclient to open connection and await a response from destination
-            using (HttpResponseMessage response = await ApiClient.GetAsync(url)) {
-                if (response.IsSuccessStatusCode) {
-                    //read in the response data in an asynch fashion 
-                    MovieModel movie = await response.Content.ReadAsAsync<MovieModel>();
-                    string titlee = movie.Title;
-                    return movie;
-                } else {
-                    throw new Exception(response.ReasonPhrase);
+        if (!String.IsNullOrEmpty(term)){
+            using (var httpClient = new HttpClient()) {
+                using (var response = await httpClient.GetAsync(endPoint)) {
+                    contentString = await response.Content.ReadAsStringAsync();
+                    returnObject  = JsonSerializer.Deserialize<SearchByTermResponse>(contentString);
                 }
             }
-        return texto;
+            returnValue = Ok(returnObject);
+        } else {
+            // Bad Request! 
+            returnValue = BadRequest();
+        }
+        
+        return returnValue;
     }
 
+    //
+    // Hice todo en el OMDBHelper.
+    // http://localhost:5000/OMBD/searchhelper?term=toy
+    // http://localhost:5000/OMBD/searchhelper?term=rischio
+    [HttpGet]
+    [Route("searchinhelper")]
+    public async Task<IActionResult> GetSearchInHelper([FromQuery] string term = "") {
+        IActionResult           returnValue;
+        SearchByTermResponse    returnObject;
+        OMBDHelper              helper;
 
+        if (!String.IsNullOrEmpty(term)){
+            helper = new OMBDHelper();
+            returnObject = await helper.GetSearch(term);
+
+            returnValue  = Ok(returnObject);
+        } else {
+            // Bad Request! 
+            returnValue = BadRequest();
+        }
+        
+        return returnValue;
+    }
+
+    //
+    // Hice todo en el Controller.
+    // http://localhost:5000/OMBD/movieinhelper?imdbid=tt0142368    // "Alto rischio"
+    // http://localhost:5000/OMBD/movieinhelper?imdbid=tt0317219    // "Cars"
+    [HttpGet]
+    [Route("movieinhelper")]
+    public async Task<IActionResult> GetMovieInHelper([FromQuery] string imdbid = "") {
+        IActionResult           returnValue;
+        SearchByIdResponse      returnObject;
+        OMBDHelper              helper;
+
+        if (!String.IsNullOrEmpty(imdbid)){
+            helper = new OMBDHelper();
+            returnObject = await helper.GetMovie(imdbid);
+
+            returnValue  = Ok(returnObject);
+        } else {
+            // Bad Request! 
+            returnValue = BadRequest();
+        }
+        
+        return returnValue;
+    }
 }
 
-public class MovieModel {
-    public string Title  { get; set; }
-    public string Poster { get; set; }
-}

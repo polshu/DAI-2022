@@ -18,7 +18,7 @@ public class OMBDHelper {
         _client = client;
     }
 
-    public async Task<SearchByTermResponse> GetSearch(string term) {
+    public async Task<SearchByTermResponse> GetSearch1(string term) {
         SearchByTermResponse returnValue;
         string endPoint = baseURL + "&s=" + term;
         string apiResponse;
@@ -27,6 +27,16 @@ public class OMBDHelper {
             apiResponse = await response.Content.ReadAsStringAsync();
             returnValue = JsonSerializer.Deserialize<SearchByTermResponse>(apiResponse);
         }
+        return returnValue;
+    }
+
+    public async Task<SearchByTermResponse> GetSearch(string term) {
+        SearchByTermResponse returnValue;
+        string endPoint = baseURL + "&s=" + term;
+        string apiResponse;
+
+        apiResponse = await HTTPHelper.GetContentAsync(endPoint, null);
+        returnValue = JsonSerializer.Deserialize<SearchByTermResponse>(apiResponse);
         return returnValue;
     }
 

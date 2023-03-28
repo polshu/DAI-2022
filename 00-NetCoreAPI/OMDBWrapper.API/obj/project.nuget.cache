@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bUYU6P6DFy821THTS/FCyFO/THTeP0OougZpIP9P2LCp/xS9AV/WgVNszmqGMN+jWiBzvi6liN5OUubbJBMCfQ==",
+  "success": true,
+  "projectFilePath": "C:\\GITProyectos\\polshu\\DAI-2022-PRIVATE\\00-NetCoreAPI\\OMDBWrapper.API\\OMDBWrapper.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ulman\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
+    "C:\\Users\\ulman\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
+  ],
+  "logs": []
+}

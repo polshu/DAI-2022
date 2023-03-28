@@ -1,0 +1,14 @@
+Requerimientos:
+VSCODE:
+    Ultima version de VSCode Version: 1.76.2
+
+CREACION DE LA API:
+	dotnet new webapi --no-https -n OMDBWrapper.API
+
+EXTENSIONES (Instalar):
+    code --install-extension ms-dotnettools.csharp
+    code --install-extension esbenp.prettier-vscode
+
+PACKAGES (remover):
+    dotnet remove package Swashbuckle.AspNetCore
+    (remover las referencias en el Program.cs)

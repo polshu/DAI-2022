@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "InpYRq7h5xuIBvPkq6rdgC1x1HSom1iuBcVpsTjFt6E=",
+  "Source": "OMDBWrapper.API",
+  "BasePath": "_content/OMDBWrapper.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

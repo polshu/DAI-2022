@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "4d9b19a3-2eb8-44fa-8ed0-66098a3baca6",
+		"name": "DAI 202X - NodeJS - TP2 - Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5470850"
+	},
+	"item": [
+		{
+			"name": "Express",
+			"item": [
+				{
+					"name": "ejemplo-query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-query?nombre=pepe&edad=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-query"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "pepe"
+								},
+								{
+									"key": "edad",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-params/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-params",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-error",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-res-status200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-res-status200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-res-status200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-res-status404",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-res-status404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-res-status404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-res-json",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-res-json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-res-json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-req-json",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jacinto\",\r\n    \"password\":\"J@cint0$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-req-json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-req-json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server",
+			"item": [
+				{
+					"name": "Pizzas - GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pizzas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pizzas - GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pizzas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pizzas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pizzas - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "64e3acf0-6113-4d5d-85e8-c6d8c12ddbdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\" : \"Pizzaiola\",\r\n    \"LibreGluten\": false,\r\n    \"Importe\": 2050.50,\r\n    \"Descripcion\": \"pizza con queso y rodajas de tomate y ajo.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/pizzas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pizzas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pizzas - Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "64e3acf0-6113-4d5d-85e8-c6d8c12ddbdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 5,\r\n    \"Nombre\": \"Napolitana\",\r\n    \"LibreGluten\": false,\r\n    \"Importe\": 1850.50,\r\n    \"Descripcion\": \"Salsa de tomate, queso mozzarella, anchoas, orégano, alcaparras y aceite de oliva. Un corcho para cuando vas al excusado..\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/pizzas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pizzas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pizzas - DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "64e3acf0-6113-4d5d-85e8-c6d8c12ddbdc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/pizzas/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pizzas",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Middlewares",
+			"item": [
+				{
+					"name": "ejemplo-middleware",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ejemplo-error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejemplo-error",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejemplo-error"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

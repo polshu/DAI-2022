@@ -1,4 +1,4 @@
-import logConfiguration from "./log-configuration.js";
+import logConfiguration from "./log-helper-config.js";
 import fs from 'fs'
 
 class LogHelper {

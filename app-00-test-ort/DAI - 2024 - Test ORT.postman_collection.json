@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "81d33172-91ef-465a-b4d5-76a4e626d893",
+		"name": "DAI - 2024 - Test ORT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5470850"
+	},
+	"item": [
+		{
+			"name": "TP00 - Test ORT",
+			"item": [
+				{
+					"name": "Test",
+					"item": [
+						{
+							"name": "Test - GetAll (8080)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test - Create (8080)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "64e3acf0-6113-4d5d-85e8-c6d8c12ddbdc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"data_type_int\": 1000,\r\n        \"data_type_varchar\": \"test de polshu\",\r\n        \"data_type_bit\": true,\r\n        \"data_type_datetime\": \"2024-02-16T16:30:25.500Z\",\r\n        \"data_type_decimal\": 35000.125,\r\n        \"data_type_float\": 3.14\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/test/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"test",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test - NGROK",
+					"item": [
+						{
+							"name": "Test - GetAll (8080)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://0f26-186-138-21-118.ngrok-free.app/api/test",
+									"protocol": "https",
+									"host": [
+										"0f26-186-138-21-118",
+										"ngrok-free",
+										"app"
+									],
+									"path": [
+										"api",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test - Create (8080)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "64e3acf0-6113-4d5d-85e8-c6d8c12ddbdc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"data_type_int\": 1000,\r\n        \"data_type_varchar\": \"test de polshu\",\r\n        \"data_type_bit\": true,\r\n        \"data_type_datetime\": \"2024-02-16T16:30:25.500Z\",\r\n        \"data_type_decimal\": 35000.125,\r\n        \"data_type_float\": 3.14\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://0f26-186-138-21-118.ngrok-free.app/api/test/",
+									"protocol": "https",
+									"host": [
+										"0f26-186-138-21-118",
+										"ngrok-free",
+										"app"
+									],
+									"path": [
+										"api",
+										"test",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test - NGROK (Domain)",
+					"item": [
+						{
+							"name": "Test - GetAll (8080)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://adder-valued-man.ngrok-free.app/api/test",
+									"protocol": "https",
+									"host": [
+										"adder-valued-man",
+										"ngrok-free",
+										"app"
+									],
+									"path": [
+										"api",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test - Create (8080)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "64e3acf0-6113-4d5d-85e8-c6d8c12ddbdc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"data_type_int\": 1000,\r\n        \"data_type_varchar\": \"test de polshu\",\r\n        \"data_type_bit\": true,\r\n        \"data_type_datetime\": \"2024-02-16T16:30:25.500Z\",\r\n        \"data_type_decimal\": 35000.125,\r\n        \"data_type_float\": 3.14\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://adder-valued-man.ngrok-free.app/api/test/",
+									"protocol": "https",
+									"host": [
+										"adder-valued-man",
+										"ngrok-free",
+										"app"
+									],
+									"path": [
+										"api",
+										"test",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

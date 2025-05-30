@@ -52,7 +52,7 @@ npm i -g @expo/ngrok
 
 ---
 
-## 🔑 API de ejemplo
+## API de ejemplo
 
 Puedes probar con el siguiente ID de IMDb:
 
@@ -61,7 +61,7 @@ Puedes probar con el siguiente ID de IMDb:
 URL completa:
 
 ```
-http://www.omdbapi.com/?i=tt0317219&apikey=[API_KEY]]
+http://www.omdbapi.com/?i=tt0317219&apikey=[API_KEY]
 ```
 
 Respuesta de ejemplo:

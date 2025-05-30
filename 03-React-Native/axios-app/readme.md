@@ -30,7 +30,13 @@ cd axios-app
 npm i axios
 ```
 
-3. Instalar `ngrok` (opcional para exponer localmente):
+3. Instalar la ultima version de Expo:
+
+```bash
+npm i expo@latest
+```
+
+4. Instalar `ngrok` (opcional para exponer localmente):
 
 ```bash
 npm i -g @expo/ngrok
@@ -41,6 +47,8 @@ npm i -g @expo/ngrok
 > ```bash
 > npm i --global @expo/ngrok@^4.1.0
 > ```
+
+
 
 ---
 

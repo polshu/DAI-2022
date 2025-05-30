@@ -24,16 +24,16 @@ npx create-expo-app axios-app --template blank
 cd axios-app
 ```
 
-2. Instalar Axios:
-
-```bash
-npm i axios
-```
-
-3. Instalar la ultima version de Expo:
+2. Instalar la ultima version de Expo:
 
 ```bash
 npm i expo@latest
+```
+
+3. Instalar Axios:
+
+```bash
+npm i axios
 ```
 
 4. Instalar `ngrok` (opcional para exponer localmente):

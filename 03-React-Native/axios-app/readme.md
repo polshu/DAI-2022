@@ -24,13 +24,19 @@ npx create-expo-app axios-app --template blank
 cd axios-app
 ```
 
-2. Instalar Axios:
+2. Instalar la ultima version de Expo:
+
+```bash
+npm i expo@latest
+```
+
+3. Instalar Axios:
 
 ```bash
 npm i axios
 ```
 
-3. Instalar `ngrok` (opcional para exponer localmente):
+4. Instalar `ngrok` (opcional para exponer localmente):
 
 ```bash
 npm i -g @expo/ngrok
@@ -42,9 +48,11 @@ npm i -g @expo/ngrok
 > npm i --global @expo/ngrok@^4.1.0
 > ```
 
+
+
 ---
 
-## 🔑 API de ejemplo
+## API de ejemplo
 
 Puedes probar con el siguiente ID de IMDb:
 
@@ -53,7 +61,7 @@ Puedes probar con el siguiente ID de IMDb:
 URL completa:
 
 ```
-http://www.omdbapi.com/?i=tt0317219&apikey=[API_KEY]]
+http://www.omdbapi.com/?i=tt0317219&apikey=[API_KEY]
 ```
 
 Respuesta de ejemplo:

@@ -1,0 +1,76 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-debug.log
+
+# Environment files
+.env
+.env.*.local
+
+# Logs
+logs
+*.log
+logs/*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Coverage / testing
+coverage/
+.nyc_output/
+jest-html-reporters-*
+
+# Build outputs
+dist/
+build/
+tmp/
+temp/
+.cache/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional REPL history
+.node_repl_history
+
+# Binaries
+*.exe
+*.dll
+*.out
+*.app
+
+# Mac system files
+.AppleDouble
+.LSOverride
+
+# Docker
+docker-compose.override.yml

@@ -1,0 +1,20 @@
+{
+  "name": "app-03-pg",
+  "version": "1.0.0",
+  "description": "Ejemplo API con acceso a PostgreSQL",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server"   : "cls && nodemon src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  }
+}

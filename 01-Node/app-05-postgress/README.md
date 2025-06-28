@@ -177,9 +177,11 @@ Vamos a realizar varias mejoras partiendo de la version inicial. Modificando y e
         }
         ```
 
-- Version 06 (server-05-supabase-client.js): 
+- Version 06: 
     - Se modifico la parte del repository para utilizar supabase client.
-    https://supabase.com/docs/reference/javascript/select
+
+        https://supabase.com/docs/reference/javascript/select
+
         ```doscon
         npm install @supabase/supabase-js
         ```

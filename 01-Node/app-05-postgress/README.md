@@ -125,6 +125,8 @@ Vamos a realizar varias mejoras partiendo de la version inicial. Modificando y e
         export default DBConfig;
         ```
         
+        El operador `??` en JavaScript (y por lo tanto en Node.js) se llama operador de fusión nula (nullish coalescing operator). Sirve para proporcionar un valor por defecto solo cuando el valor a la izquierda es `null` o `undefined`.
+
     - Try/catch separado tanto para la **conexion**, como la **ejecucion** y tambien el **cierre** de la conexion con la base de datos.
 
 - Version 03: 

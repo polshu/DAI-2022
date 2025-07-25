@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import 'dotenv/config'
 import express 	from "express";	// hacer npm i express
 import cors 	from "cors";	// hacer npm i cors

@@ -177,6 +177,69 @@ Vamos a realizar varias mejoras partiendo de la version inicial. Modificando y e
         }
         ```
 
+- Version 05.01: 
+    - Se agrego la columna `'imagen'` a la tabla `'alumnos'`.
+    - Se agrego un upload de imagenes para el alumno:
+        - **server.js**: Se agrego el middleware para retornar archivos (que son las imagenes).
+        ```javascript
+        let cwd = process.cwd();    // Current Working Directory
+        app.use('/static', express.static(path.join(cwd, 'uploads')));
+        ```
+        - **controllers**: Se agrego un nuevo endpoint, al controller de alumnos, para hacer el upload de la imagen.
+        - **repositories**: Se modificaron los metodos `getAllAsync` de los repositorios, para que retornen objetos y arrays de objetos utilizando las funciones `'json_build_object()'` y `'array()'` de PostgreSQL.
+
+    - Se agrego la bilbioteca multer para el upload de archivos.
+        ```doscon
+        npm install multer
+        ```
+    - Se puso una imagen default
+        http://localhost:3000/static/default.jpg
+    
+    - Probar el **request** desde POSTMAN
+         - Método  : POST
+         - URL     : http://localhost:3000/alumnos/123/photo (cambia puerto/host según tu app)
+         - Tipo    : form-data
+         - Key     : image (tipo File)
+         - Value   : el archivo de imagen (jpg/png, etc.)
+         - Headers : Postman pone Content-Type: multipart/form-data automáticamente.
+
+    - Probar desde React Native
+
+        ```javascript
+        import axios from 'axios';
+
+        // image = { uri: 'file:///...', type: 'image/jpeg', fileName: 'myphoto.jpg' }
+        // id = '123'
+
+        export async function uploadAlumnoPhoto({ id, image }) {
+            const form = new FormData();
+
+            // Se debe pasar name, type y uri
+            form.append('image', {
+                uri : image.uri,
+                name: image.fileName || 'photo.jpg',
+                type: image.type || 'image/jpeg',
+            });
+
+            const res = await axios.post(
+                `http://<TU_HOST>:<TU_PORT>/alumnos/${id}/photo`,
+                form,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                    // En iOS simulador / Android emulador revisa el host:
+                    // iOS simulador: usa tu IP local
+                    // Android emulador: 10.0.2.2 en vez de localhost
+                }
+            );
+
+            return res.data; // { id, filename, path, url }
+        }
+        ```
+
+
+
 - Version 06: 
     - Se modifico la parte del repository para utilizar supabase client.
 

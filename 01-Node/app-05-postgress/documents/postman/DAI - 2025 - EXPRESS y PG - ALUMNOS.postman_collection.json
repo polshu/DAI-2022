@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "969c0233-e430-4553-b346-844a1f0a46b0",
-		"name": "DAI - EXPRESS y PG - ALUMNOS",
+		"name": "DAI - 2025 - EXPRESS y PG - ALUMNOS",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5470850"
 	},
@@ -50,7 +50,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/api/alumnos/147",
+									"raw": "http://localhost:3000/api/alumnos/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -59,7 +59,7 @@
 									"path": [
 										"api",
 										"alumnos",
-										"147"
+										"1"
 									]
 								}
 							},
@@ -101,7 +101,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": 147,\r\n    \"nombre\": \"Guillermo\",\r\n    \"apellido\": \"Wonka\",\r\n    \"id_curso\": 1,\r\n    \"fecha_nacimiento\": \"2007-01-25\",\r\n    \"hace_deportes\": 1\r\n}",
+									"raw": "{\r\n    \"id\": 155,\r\n    \"nombre\": \"Guillermo\",\r\n    \"apellido\": \"Wonka\",\r\n    \"id_curso\": 1,\r\n    \"fecha_nacimiento\": \"2007-01-25\",\r\n    \"hace_deportes\": 0\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -130,7 +130,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/api/alumnos/147",
+									"raw": "http://localhost:3000/api/alumnos/155",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -139,7 +139,97 @@
 									"path": [
 										"api",
 										"alumnos",
-										"147"
+										"155"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "alumnos  - Upload Image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/GITProyectos/polshu/DAI-2022/01-Node/app-05-postgress/Version 05.01/uploads/default.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/alumnos/1/photo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"alumnos",
+										"1",
+										"photo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cursos",
+					"item": [
+						{
+							"name": "cursos - GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/cursos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cursos"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cursos  - GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/cursos/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cursos",
+										"3"
 									]
 								}
 							},

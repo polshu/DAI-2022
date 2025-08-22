@@ -11,7 +11,8 @@ CREATE TABLE alumnos (
     apellido VARCHAR(75) NOT NULL,
     id_curso INT REFERENCES cursos(id),
     fecha_nacimiento DATE,
-    hace_deportes BOOLEAN
+    hace_deportes BOOLEAN,
+	imagen VARCHAR(512) NULL,
 );
 
 -- Tabla grupos_pdp
